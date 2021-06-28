@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 100%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+</style>
+<head>
+  <script>
+  datalayer.push ({
+    'event': 'fieldName',
+    'event': 'formSubmission'
+    });
+  <a href="#" name="submit" onclick="dataLayer.push({'event': 'submit-click'});" >Submit</a>
+  </script>
+  
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K3RF7SC');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-200529050-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-200529050-1');
+  </script>
+
+
+  <title>MY Website</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3RF7SC"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post" style="border:1px solid #ccc">
+  <div class="container">
+    <h1>Sign Up</h1>
+    
+    <hr>
+
+    <label for="name"><b>Name:</b></label>
+    <input type="text" placeholder="Enter your full name"  name="name" required >
+
+    <label for="email"><b>Email:</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="mob"><b>Mobile Number:</b></label>
+    <input type="text" placeholder="Enter your Mobile Number" name="mob" required>
+
+    <label for="dob"><b>Date of Birth:</b></label>
+    <input type="date" placeholder="Enter your Mobile Number" name="dob" required>
+    <br></br>
+
+    <label for="gender"><b>Gender:</b></label>
+    <label for="male"><b>Male</b></label>
+    <input type="radio" id="male" name="gender" value="male" required>
+
+    <label for="female"><b>Female</b></label>
+    <input type="radio" id="female" name="gender" value="female" required>
+    <br></br>
+    <label>
+      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+    </label>
+    
+    
+
+    <div class="clearfix">
+      
+      
+     <a class="btn btn-primary" button type="submit" class="signupbtn" href="./Image-2.html">Submit</a></button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
+
+
